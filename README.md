@@ -38,7 +38,7 @@ series = {ISWC '23}
 
 ## Installation
 
-A private repo for IMUGPT. Run the follwing code to set up T2M-GPT part of IMUGPT
+Run the follwing code to set up T2M-GPT part of IMUGPT
 
 ```bash
 conda env create -f environment.yml
@@ -60,13 +60,6 @@ sudo apt install unzip
 ```
 
 Tested on Ubuntu 20.04.
-
-<!-- If you have a GPU that is RTX 30 series or newer, you will need to uninstall torch and install a newer torch version using the following command
-
-```bash
-pip uninstall torch
-pip install torch==1.9.1+cu111 torchvision==0.10.1+cu111 torchaudio==0.9.1 -f https://download.pytorch.org/whl/torch_stable.html
-``` -->
 
 ## Dependencies
 
