@@ -4,6 +4,7 @@ checkpoints/
 pretrained/
 ViT-B-32.pt
 api_key.txt
+data/*
 
 
 # Sphinx documentation
