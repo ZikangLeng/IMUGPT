@@ -2,8 +2,6 @@
 
 <img src="assets/imugpt_logo.svg" alt="IMUGPT logo" width="300">
 
-# IMUGPT
-
 ### Describe an activity, generate wearable sensor data
 
 **[Zikang Leng](https://zikangleng.github.io/), Amitrajit Bhattacharjee, Hrudhai Rajasekhar, Lizhe Zhang, Elizabeth Bruda, Hyeokhyen Kwon, [Thomas Plötz](https://ploetzlab.net/)**
