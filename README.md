@@ -30,15 +30,6 @@ No cameras or recording sessions are needed.
 
 <img src="assets/imugpt2_pipeline.png" alt="IMUGPT pipeline: an LLM writes activity descriptions, a text-to-motion model generates 3D motion, and virtual IMU data is extracted for training activity recognition models" width="100%">
 
-```mermaid
-flowchart LR
-    A["💬 Activity name<br/><sub>e.g. 'climbing stairs'</sub>"] --> B["🤖 LLM<br/><sub>diverse descriptions</sub>"]
-    B --> C["🕺 Text-to-motion<br/><sub>T2M-GPT</sub>"]
-    C --> D["🔎 Motion filter<br/><sub>LLM checks each motion</sub>"]
-    D --> E["📈 Virtual IMU<br/><sub>IK + IMUSim</sub>"]
-    E --> F["🧠 Train HAR model"]
-    D -. "diversity metric:<br/>when to stop generating" .-> B
-```
 
 ## Papers
 
