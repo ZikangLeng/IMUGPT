@@ -69,3 +69,5 @@ dmypy.json
 .pyre/
 
 .vscode
+# SMPL model (licence forbids redistribution; see README)
+body_models/smpl/SMPL_NEUTRAL.pkl

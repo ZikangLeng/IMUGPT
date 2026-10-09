@@ -111,6 +111,16 @@ The pretrained models are stored in the `pretrained` folder:
 bash dataset/prepare/download_model.sh
 ```
 
+### SMPL body model
+
+The SMPL model file is not included in this repository (the [SMPL licence](https://smpl.is.tue.mpg.de/modellicense.html) does not allow redistribution). Register at [smpl.is.tue.mpg.de](https://smpl.is.tue.mpg.de/) to accept the licence, then fetch the body-model files into `body_models/smpl/`:
+
+```bash
+bash dataset/prepare/download_smpl.sh
+```
+
+The code expects `body_models/smpl/SMPL_NEUTRAL.pkl`.
+
 ### IMUSim
 
 ```bash
