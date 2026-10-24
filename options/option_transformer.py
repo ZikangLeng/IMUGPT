@@ -1,6 +1,6 @@
 import argparse
 
-def get_args_parser():
+def get_args_parser(args=None):
     parser = argparse.ArgumentParser(description='Optimal Transport AutoEncoder training for Amass',
                                      add_help=True,
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -65,4 +65,4 @@ def get_args_parser():
     parser.add_argument('--pkeep', type=float, default=1.0, help='keep rate for gpt training')
     
     
-    return parser.parse_args()
+    return parser.parse_args(args)

@@ -445,7 +445,7 @@ def incidence(parents):
     
     es = edges(parents)
     
-    inc = np.zeros((len(parents)-1, len(parents))).astype(np.int)
+    inc = np.zeros((len(parents)-1, len(parents))).astype(int)
     for i, e in enumerate(es):
         inc[i,e[0]] =  1
         inc[i,e[1]] = -1
@@ -464,7 +464,7 @@ def get_sorted_order_internal(sorted_order, parent_out_idx, parent_in_idx, child
 def get_sorted_order(parents):
     parents = np.array(parents)  # if type(parents)==list, make it an np.array. if it's already an np.array, this line does not change it.
     children = children_list(parents)
-    sorted_order = np.zeros(parents.shape, dtype=np.int)
+    sorted_order = np.zeros(parents.shape, dtype=int)
     root_idx = np.where(parents == -1)[0][0]
     sorted_order[0] = root_idx
 
