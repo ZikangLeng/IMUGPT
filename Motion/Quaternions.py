@@ -264,8 +264,7 @@ class Quaternions:
         
         if len(self.shape) == 1:
             
-            import numpy.core.umath_tests as ut
-            system = ut.matrix_multiply(self.qs[:,:,np.newaxis], self.qs[:,np.newaxis,:]).sum(axis=0)
+            system = np.matmul(self.qs[:,:,np.newaxis], self.qs[:,np.newaxis,:]).sum(axis=0)
             w, v = np.linalg.eigh(system)
             qiT_dot_qref = (self.qs[:,:,np.newaxis] * v[np.newaxis,:,:]).sum(axis=1)
             return Quaternions(v[:,np.argmin((1.-qiT_dot_qref**2).sum(axis=0))])            

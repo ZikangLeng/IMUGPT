@@ -97,7 +97,7 @@ def sliding_window(a,ws,ss = None,flatten = True):
     # Collapse strided so that it has one more dimension than the window.  I.e.,
     # the new array is a flat list of slices.
     meat = len(ws) if ws.shape else 0
-    firstdim = (np.product(newshape[:-meat]),) if ws.shape else ()
+    firstdim = (np.prod(newshape[:-meat]),) if ws.shape else ()
     dim = firstdim + (newshape[-meat:])
     # remove any dimensions with size 1
     dim = list(filter(lambda i : i != 1,dim))

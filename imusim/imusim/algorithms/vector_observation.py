@@ -312,7 +312,7 @@ class QUEST(LeastSquaresOptimalVectorObservation):
             # Closed form solution for lambdaMax, see Shuster 1979 eqs 72-3.
             cosTerm = vectors.dot(*refs)[0]*vectors.dot(*meas)[0] + \
                 vectors.norm(vectors.cross(*refs))*vectors.norm(vectors.cross(*meas))
-            lambdaMax = math.sqrt(np.sum(self.weights**2) + 2*np.product(self.weights)*cosTerm)
+            lambdaMax = math.sqrt(np.sum(self.weights**2) + 2*np.prod(self.weights)*cosTerm)
         else:
             # Iterate for lambdaMax, using substitutions from Shuster JAS1290 paper
             # for better numerical accuracy.
