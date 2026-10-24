@@ -190,7 +190,7 @@ class Animation:
 
     # def sort(self, names):
     #     children = AnimationStructure.children_list(self.parents)
-    #     sorted_order = np.zeros(self.parents.shape, dtype=np.int)
+    #     sorted_order = np.zeros(self.parents.shape, dtype=int)
     #     root_idx = np.where(self.parents == -1)[0][0]
     #     sorted_order[0] = root_idx
     #
