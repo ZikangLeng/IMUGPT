@@ -31,7 +31,7 @@ class AStarTW:
         
         astar = AStar(neighbor_func, dist_func, dist_func, bias=0.0, silent=silent)
         
-        path = np.array(astar((0,0), (im-1, jm-1))).astype(np.float)
+        path = np.array(astar((0,0), (im-1, jm-1))).astype(float)
         path[0] = ((1-smoothing) * path[0] + (smoothing) * path[1])
         path[1:-1] = (
            0.5 * (1-smoothing) * path[:-2] + 
@@ -100,7 +100,7 @@ class DTW:
             raise Exception('TODO: Implement')
         
         if self.type == 'linear':
-            p0 = self.leny * (Xp.astype(np.float) / self.lenx)
+            p0 = self.leny * (Xp.astype(float) / self.lenx)
             p1 = np.interp(Xp, self.path_x, self.path_y)
             return p0 * (1-self.bias) + p1 * (self.bias)
             

@@ -7,7 +7,6 @@
 import operator
 
 import numpy as np
-import numpy.core.umath_tests as ut
 
 try:
     from . import AnimationStructure
@@ -190,7 +189,7 @@ class Animation:
 
     # def sort(self, names):
     #     children = AnimationStructure.children_list(self.parents)
-    #     sorted_order = np.zeros(self.parents.shape, dtype=np.int)
+    #     sorted_order = np.zeros(self.parents.shape, dtype=int)
     #     root_idx = np.where(self.parents == -1)[0][0]
     #     sorted_order[0] = root_idx
     #
@@ -422,7 +421,7 @@ def transforms_multiply(t0s, t1s):
         together
     """
 
-    return ut.matrix_multiply(t0s, t1s)
+    return np.matmul(t0s, t1s)
 
 
 def transforms_inv(ts):
